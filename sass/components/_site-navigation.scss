@@ -1,0 +1,70 @@
+
+.logo {
+    font-family: 'Raleway';
+    font-size: 26px;
+    text-decoration: none;
+    color: $logoBlack;
+    cursor: pointer;
+    line-height: 1.19;
+    margin-right: 93px; 
+}
+.logo__web {
+    color: $brandBlue;
+}
+.site-nav {
+    list-style: none;
+    column-gap: 46px;
+}
+.site-nav__content {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    color: $textDark;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);   
+}
+.site-nav__content:hover {
+    color: $brandBlue;
+}
+.site-nav__content:focus {
+    color: $brandBlue;
+}
+.__content--underline {
+    position: relative;
+}
+
+.__content--underline::after {
+   content: "";
+   display: block;
+   position: absolute;
+   bottom: -34px;
+   width: 100%;
+   height: 4px;
+   border-radius: 2px;
+   background-color: $brandBlue;
+}
+.contact-links {
+    display: flex;
+    margin-left: auto;
+    column-gap: 50px;
+}
+.contact-links__content {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    color: $lightGrey;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contact-links__content:hover {
+    color: $brandBlue;
+}
+.__content--icon{
+    fill: $lightGrey;
+    margin-right: 10px;
+}
+.contact-links__content:hover svg {
+    fill: $brandBlue;
+}
