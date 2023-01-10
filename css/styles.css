@@ -11,7 +11,7 @@
     --text-light-grey: #757575;
     --header-border: #ECECEC;
     --border-color: #eeeeee;
-    --icon-team: #AFB1B8;
+    --icon-team: #afb1b8;
     --logo-header: #000000;
     --background-dark-transparent: #2F303A;
     --box-shadow-port: rgba(0, 0, 0, 0.1);
@@ -382,19 +382,51 @@ body {
 }
 
 /*Nasi klienci*/
-.client {
+.client-titel {
     font-size: 36px;
     line-height: 1.16;
     font-weight: 700;
     color: var(--text-dark);
     text-align: center;
 }
+
+.client-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    column-gap: 30px;
+    margin-top: 50px;
+}
+
+.__icon-list {
+    border: 1px solid var(--icon-team);
+    border-radius: 4px;
+    padding: 16px 32px;
+    cursor: pointer;
+    transition-property: border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.__icon-client {
+    fill: var(--icon-team);
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.__icon-list:hover svg {
+    fill: var(--text-blue);
+}
+
+.__icon-list:hover {
+    border: 1px solid var(--text-blue);
+}
 /*FOOTER*/
 .footer-wrapper {
     background-color: var(--dark-background);
     padding: 60px 0;
 }
-.section-footer {
+.__section {
     padding: 0 15px;
     display: flex;
     column-gap: 70px;
@@ -409,40 +441,40 @@ body {
     display: flex;
     padding-bottom: 20px;
 }
-.text-web {
+.__--web {
     color: var(--text-blue);
 }
-.address-items {
+.__address {
     font-style: normal;
 }
-.address-items ul {
+.__address-item {
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 9px;
 }
 
-.address-items span {
+.__item {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
     color: var(--text-white);
 }
-.address-items a.address-decoration {
+.__item-contact.address-decoration {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
     color: rgba(255, 255, 255, 0.6);
     text-decoration: underline;
 }
-.address-items a.tel-decoration {
+.__address a.tel-decoration {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
     color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
 }
-.address-items a {
+.__item-contact {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
@@ -452,44 +484,15 @@ body {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.address-items a:hover {
+.__item-contact:hover {
     color: var(--light-blue-bg);
 }
 
 /*SVG*/
 
 
-.client-icon-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    column-gap: 30px;
-    margin-top: 50px;
-}
-.client-icon {
-    fill: var(--icon-team);
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.client-icon-wrapper li {
-    border: 1px solid var(--icon-team);
-    border-radius: 4px;
-    padding: 16px 32px;
-    cursor: pointer;
-    transition-property: border;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.client-icon-wrapper li:hover svg {
-    fill: var(--text-blue);
-}
-.client-icon-wrapper li:hover {
-    border: 1px solid var(--text-blue);
-}
 
-.contact {
+.social-media-titel {
     font-size: 14px;
     line-height: 1.14;
     color: var(--text-white);
@@ -504,7 +507,7 @@ body {
     margin-top: 20px;
     margin-bottom: 100px;
 }
-.social-media-wrapper a {
+.__contact {
     border-radius: 50%;
     padding: 12px;
     display: flex;
@@ -515,12 +518,12 @@ body {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.social-media {
-    fill: var(--white-bg);
-}
-.social-media-wrapper a:hover {
+.__contact:hover {
     background-color: var(--light-blue-bg);
     border-radius: 50%;
+}
+.__icon {
+    fill: var(--white-bg);
 }
 
 /*TASK 5*/
@@ -593,7 +596,7 @@ body {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 }
-.close-btn {
+.__close-btn {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -619,7 +622,7 @@ body {
 
 /*TASK 6*/
 
-.titel-content {
+.__titel-modal {
     padding: 40px 40px 12px 40px;
     font-weight: 700;
     font-size: 20px;
@@ -628,20 +631,20 @@ body {
     letter-spacing: 0.03em;
     color: var(--text-dark);
 }
-.text-content {
+.__modal-content {
     font-weight: 400;
     font-size: 12px;
     line-height: 1.16;
     letter-spacing: 0.01em;
     color: var(--text-light-grey);
 }
-.modal-wrapper {
+.modal-content__wrapper {
     display: block;
     margin-left: 40px;
     margin-right: 40px;
     position: relative;
 }
-.modal-wrapper input {
+.__modal-input {
     margin-bottom: 10px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
@@ -654,7 +657,7 @@ body {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
-.modal-icon {
+.__modal-icon {
     position: absolute;
     top:50%;
     left:10px;
@@ -664,16 +667,16 @@ body {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-wrapper input:focus {
+.__modal-input:focus {
     border: 1px solid var(--light-blue-bg);
 }
 
-.modal-wrapper:focus-within .modal-icon {
+.modal-content__wrapper:focus-within .__modal-icon {
     fill: var(--light-blue-bg);
 }
 
 
-.space-area {
+.__space-area {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -688,18 +691,18 @@ body {
     outline: none;  
     padding: 16px 12px;
 }
-.space-area:hover,
-.space-area:focus {
+.__space-area:hover,
+.__space-area:focus {
     border: 1px solid var(--light-blue-bg);
 }
-.space-area::placeholder {
+.__space-area::placeholder {
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
 }
 
-.rules-wrapper {
+.modal-content__rules {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -714,8 +717,12 @@ body {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.__checkbox-input {
+    margin-right: 5px;
+    appearance: none;
+  }
 
-.rules-checkbox-icon {
+.__checkbox-icon {
     position: absolute;
     fill: var(--white-color);
     background-color: var(--white-bg);
@@ -728,23 +735,16 @@ body {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
-  .rules-checkbox-input {
-    margin-right: 5px;
-    appearance: none;
-  }
-  .rules-checkbox-input + .rules-checkbox-icon {
+ 
+  .__checkbox-input + .__checkbox-icon {
     fill: var(--text-white);
   }
-  .rules-checkbox-input:checked + .rules-checkbox-icon {
+  .__checkbox-input:checked + .__checkbox-icon {
     fill: var(--text-white);
     border: none;
     background-color: var(--light-blue-bg);
   }
-
-.rules {
-    color: var(--text-blue);
-}
-.rules-folder {
+  .__rules-folder {
     margin-left: 7px;
     font-weight: 400;
     font-size: 14px;
@@ -752,10 +752,14 @@ body {
     letter-spacing: 0.03em;
     color: var(--text-light-grey);
 }
+.__--rules {
+    color: var(--text-blue);
+}
 
 
 
-.btn-accept {
+
+.__modal-content__btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -775,14 +779,14 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 }
-.btn-accept:hover {
+.__modal-content__btn:hover {
     background: var(--light-blue-bg);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
 }
 
 /*NEWSLETTER*/
-.nl-text {
+.nl-titel {
     color: var(--text-white);
     font-weight: 700;
     font-size: 14px;
@@ -797,7 +801,7 @@ body {
     gap: 12px;
 }
 
-.nl-wrapper input {
+.__input {
     padding-left: 16px;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -812,7 +816,7 @@ body {
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
 }
-.nl-wrapper input::placeholder {
+.__input::placeholder {
     font-size: 16px;
     line-height: 1.25;
     letter-spacing: 0.03em;

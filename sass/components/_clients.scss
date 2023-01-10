@@ -1,0 +1,40 @@
+.client-titel {
+    font-size: 36px;
+    line-height: 1.16;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.client-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    column-gap: 30px;
+    margin-top: 50px;
+    &.__icon-list {
+        border: 1px solid var(--icon-team);
+        border-radius: 4px;
+        padding: 16px 32px;
+        cursor: pointer;
+        transition-property: border;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        &    .__icon-client {
+            fill: var(--icon-team);
+            transition-property: fill;
+            transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    }
+
+}
+
+.__icon-list:hover svg {
+    fill: var(--text-blue);
+}
+
+.__icon-list:hover {
+    border: 1px solid var(--text-blue);
+}
