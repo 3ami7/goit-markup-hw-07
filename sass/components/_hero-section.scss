@@ -1,12 +1,23 @@
-.hero-section {
+.hero {
     background-color: $darkBg;
     background: linear-gradient($darkBg,
     $darkBg);
     background-image: url(../images/bg.jpg);
     width: 1600px;
+    padding: 94px 0;
     margin: 0 auto;
 }
-.__main {
+.hero-section {
+    padding-bottom: 94px;
+}
+.hero__container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.hero__container-titel {
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -14,7 +25,7 @@
     text-align: center;
     margin: 106px 252px 0;
 }
-.__btn {
+.hero__container-btn {
     background-color: $brandBlue;
     color: $white;
     font-size: 16px;

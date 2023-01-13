@@ -1,13 +1,11 @@
 .items-grid {
     margin-top: -94px;
-    &__position {
-        position: relative;
-    }
-    &__position--photo {
-        vertical-align: bottom;
-    }
+    padding: 94px 0;
 }
-
+.items-grid__container {
+    width: 1200px;
+    margin: 0 auto;
+}
 .items-grid__titel {
     font-size: 36px;
     line-height: 1.16;
@@ -15,13 +13,21 @@
     color: $textDark;
     text-align: center;
     padding-bottom: 50px;
-    &__wrapper {
-        display: flex;
-        column-gap: 30px;
-        list-style: none;
-    }
 }
-.__position-content {
+.items-grid__list {
+    display: flex;
+    column-gap: 30px;
+    list-style: none;
+}
+.items-grid__position {
+    position: relative;
+}
+.items-grid__photo {
+    vertical-align: bottom;
+}
+
+
+.items-grid__content {
     position: absolute;
     width: 100%;
     bottom: 0;

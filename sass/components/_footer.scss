@@ -1,15 +1,15 @@
-.footer-wrapper {
+.footer {
     background-color: v$darkBg;
     padding: 60px 0;
-    &.__section {
-        padding: 0 15px;
-        display: flex;
-        column-gap: 70px;
-        justify-content: space-around;
-    }
+}
+.footer__container{
+    padding: 0 15px;
+    display: flex;
+    column-gap: 70px;
+    justify-content: space-around;
 }
 
-.footer-logo {
+.footer__logo {
     font-family: 'Raleway';
     font-size: 26px;
     line-height: 1.19;
@@ -17,48 +17,47 @@
     text-decoration: none;
     display: flex;
     padding-bottom: 20px;
-    &.__--web {
-        color: $brandBlue;
-    }
 }
-
-.__address {
+.footer__logo--web {
+    color: $brandBlue;
+}
+.footer__address {
     font-style: normal;
 }
-.__address-item {
+.footer__address-list {
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 9px;
-    &.__item {
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 1.71;
-        color: $white;
-    }
-    &.__item-contact {
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 1.71;
-        color: rgba(255, 255, 255, 0.6);
-        text-decoration: none;
-        transition-property: color;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    }
 }
-.__item-contact:hover {
+.footer__address-location {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    color: $white;
+}
+.footer__address-contact {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer__address-contact:hover {
     color: $brandBlue;
 }
 
 
-.social-media-titel {
+.footer__social-media-titel {
     font-size: 14px;
     line-height: 1.14;
     color: $white;
     margin-top: 10px;
 }
-.social-media-wrapper {
+.footer__social-media-list {
     list-style: none;
     display: flex;
     justify-content: center;
@@ -66,22 +65,81 @@
     column-gap: 10px;
     margin-top: 20px;
     margin-bottom: 100px;
-    &.__contact {
-        border-radius: 50%;
-        padding: 12px;
-        display: flex;
-        justify-content: center;
-        align-items: center;  
-        background-color: rgba(255, 255, 255, 0.1);
-        transition-property: background-color, border-radius;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        &.__icon {
-            fill: $white;
-        }
-    }
 }
-.__contact:hover {
+.footer__social-media-contact {
+    border-radius: 50%;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    background-color: rgba(255, 255, 255, 0.1);
+    transition-property: background-color, border-radius;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+.footer__social-media-icon {
+    fill: $white;
+}
+.footer__social-media-contact:hover {
     background-color: $brandBlue;
     border-radius: 50%;
+}
+.footer__nl-titel {
+    color: $white;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.footer__nl-wrapper {
+    display: flex;
+    padding-top: 20px;
+    gap: 12px;
+}
+
+.footer__nl-input {
+    padding-left: 16px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    height: 50px;
+    width: 358px;
+    background-color: $darkBg;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+}
+.footer__nl-input::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+}
+.footer__nl-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $brandBlue;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    color: $white;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.8;
+    letter-spacing: 0.06em;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    column-gap: 24px;
+}
+
+.footer__nl-btn-icon {
+    fill: $white;
 }

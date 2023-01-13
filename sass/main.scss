@@ -7,6 +7,8 @@
 @import "./components/clients";
 @import "./components/footer";
 @import "./components/modal";
+@import "./components/filters";
+@import "./components/set-card";
 
 
 
@@ -30,25 +32,4 @@ body {
 .container {
     width: 1200px;
     margin: 0 auto;
-}
-.header-border {
-    border-bottom: 1px solid $headerBorder;
-}
-.main-header {
-    display: flex;
-    align-items: center;
-    padding: 24px 15px 25px;
-}
-.site-nav, 
-.contact-links,
-.main-nav {
-    display: flex;
-    align-items: center;
-}
-.hero-section-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
 }

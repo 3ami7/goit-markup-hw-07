@@ -1,5 +1,16 @@
-
-.logo {
+.header {
+    border-bottom: 1px solid $headerBorder;
+    &.header-container {
+        display: flex;
+        align-items: center;
+        padding: 24px 15px 25px;
+    }
+}
+.header__site-nav {
+    display: flex;
+    align-items: center;
+}
+.header__container-logo {
     font-family: 'Raleway';
     font-size: 26px;
     text-decoration: none;
@@ -7,15 +18,22 @@
     cursor: pointer;
     line-height: 1.19;
     margin-right: 93px; 
+    &.header__container-logo--text {
+        color: $brandBlue;
+        margin-right: 0;
+    }
 }
-.logo__web {
-    color: $brandBlue;
+
+.header__contact-links {
+    display: flex;
+    align-items: center;
 }
-.site-nav {
+
+.header__site-nav {
     list-style: none;
     column-gap: 46px;
 }
-.site-nav__content {
+.header__site-nav-link {
     text-decoration: none;
     font-weight: 500;
     font-size: 14px;
@@ -24,17 +42,17 @@
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);   
 }
-.site-nav__content:hover {
+.header__site-nav-link:hover {
     color: $brandBlue;
 }
-.site-nav__content:focus {
+.header__site-nav-link:focus {
     color: $brandBlue;
 }
-.__content--underline {
+.header__site-nav-link--underline {
     position: relative;
 }
 
-.__content--underline::after {
+.header__site-nav-link--underline::after {
    content: "";
    display: block;
    position: absolute;
@@ -44,12 +62,12 @@
    border-radius: 2px;
    background-color: $brandBlue;
 }
-.contact-links {
+.header__contact-links {
     display: flex;
     margin-left: auto;
     column-gap: 50px;
 }
-.contact-links__content {
+.header__contact-link {
     text-decoration: none;
     font-weight: 500;
     font-size: 14px;
@@ -58,13 +76,13 @@
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contact-links__content:hover {
+.header__contact-link:hover {
     color: $brandBlue;
 }
-.__content--icon{
+.header__contact-link-icon{
     fill: $lightGrey;
     margin-right: 10px;
 }
-.contact-links__content:hover svg {
+.header__contact-link:hover svg {
     fill: $brandBlue;
 }
