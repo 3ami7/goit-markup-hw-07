@@ -1,9 +1,12 @@
 .header {
     border-bottom: 1px solid $headerBorder;
-    &.header-container {
+    &__container {
       display: flex;
       align-items: center;
       padding: 24px 15px 25px;
+    }
+    &__container-nav {
+      display: flex;
     }
   
     &__site-nav {

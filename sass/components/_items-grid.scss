@@ -1,33 +1,30 @@
 .items-grid {
     margin-top: -94px;
     padding: 94px 0;
-}
-.items-grid__container {
+    &__container {
     width: 1200px;
     margin: 0 auto;
-}
-.items-grid__titel {
+    }
+    &__titel {
     font-size: 36px;
     line-height: 1.16;
     font-weight: 700;
     color: $textDark;
     text-align: center;
     padding-bottom: 50px;
-}
-.items-grid__list {
+    }
+    &__list {
     display: flex;
     column-gap: 30px;
     list-style: none;
-}
-.items-grid__position {
+    }
+    &__position {
     position: relative;
-}
-.items-grid__photo {
+    }
+    &__photo {
     vertical-align: bottom;
-}
-
-
-.items-grid__content {
+    }
+    &__content {
     position: absolute;
     width: 100%;
     bottom: 0;
@@ -40,4 +37,6 @@
     font-size: 14px;
     line-height: 1.14;
     font-weight: 700;
+    }
+
 }
